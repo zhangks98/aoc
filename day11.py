@@ -15,6 +15,7 @@ for j in range(len(universe[0])):
     if all(s == '.' for s in [row[j] for row in universe]):
         col_expand.append(j)
 
+
 def lower_bound(a, val):
     l = 0
     r = len(a)
@@ -25,6 +26,7 @@ def lower_bound(a, val):
         else:
             r = mid
     return l
+
 
 def upper_bound(a, val):
     l = 0
@@ -38,10 +40,13 @@ def upper_bound(a, val):
     return l
 
 # Given a sorted array a, find the number of insertecting element within [lo, hi].
+
+
 def num_intersect(a, lo, hi):
     l = lower_bound(a, lo)
     r = upper_bound(a, hi)
     return r - l
+
 
 galaxies = []
 for i, row in enumerate(universe):
@@ -65,5 +70,3 @@ for x, g1 in enumerate(galaxies):
         dist_sum += dist
 
 print(dist_sum)
-
-
