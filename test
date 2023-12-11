@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+challenge="day$@"
+make "${challenge}"
+./"${challenge}" < "${challenge}.in"
