@@ -4,4 +4,4 @@ set -e
 
 challenge="day$@"
 make build/"${challenge}"
-out/"${challenge}" < "${challenge}.in"
+build/"${challenge}" < "${challenge}.in"
