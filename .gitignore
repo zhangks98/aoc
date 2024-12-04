@@ -1,5 +1,5 @@
-# Input files
 *.in
+build/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

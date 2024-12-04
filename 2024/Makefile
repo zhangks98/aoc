@@ -8,5 +8,6 @@ ifeq ($(UNAME), Darwin)
 	FLAGS += -I/opt/homebrew/include -L/opt/homebrew/lib
 endif
 
-%: %.cc
+build/%: %.cc
+	mkdir -p $(dir $@)
 	$(CXX) $(FLAGS) $(LIBS) -o $@ $^
